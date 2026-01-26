@@ -1,0 +1,30 @@
+{{if .Todos}}
+<ul class="space-y-3">
+    {{range .Todos}}
+    <li class="flex items-center gap-4 p-4 border-2 border-black {{if .Done}}todo-done bg-gray-100{{else}}bg-white{{end}}">
+        <button
+            hx-post="/todos/toggle/{{.ID}}"
+            hx-target="#todo-list"
+            hx-swap="innerHTML"
+            class="brutalist-btn btn btn-sm {{if .Done}}btn-success{{else}}btn-outline{{end}}"
+        >
+            {{if .Done}}&#10003;{{else}}&nbsp;&nbsp;{{end}}
+        </button>
+        <span class="flex-1 text-lg font-semibold">{{.Text}}</span>
+        <button
+            hx-delete="/todos/delete/{{.ID}}"
+            hx-target="#todo-list"
+            hx-swap="innerHTML"
+            class="brutalist-btn btn btn-sm btn-error bg-red-500 text-white"
+        >
+            X
+        </button>
+    </li>
+    {{end}}
+</ul>
+{{else}}
+<div class="text-center py-8">
+    <p class="text-xl font-bold text-gray-400 uppercase">No todos yet!</p>
+    <p class="text-gray-500 mt-2">Add one above to get started.</p>
+</div>
+{{end}}
