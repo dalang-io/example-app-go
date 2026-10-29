@@ -43,3 +43,5 @@ The app includes a Dockerfile for automatic container builds.
 <!-- push test 2026-10-29T06:35:10Z: second push, hook now points at staging -->
 
 <!-- push test 2026-10-29T06:52:54Z: third push, after the first build was cut off by an API restart -->
+
+<!-- push test 2026-10-29T07:49:59Z: port experiment, the stored port is 8000 and the Dockerfile EXPOSEs 3000 -->
