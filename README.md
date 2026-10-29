@@ -39,3 +39,5 @@ The app includes a Dockerfile for automatic container builds.
 - `PORT` - Server port (default: 3000)
 
 <!-- push test 2026-10-29T06:30:26Z: checks that a push rebuilds the deployment -->
+
+<!-- push test 2026-10-29T06:35:10Z: second push, hook now points at staging -->
