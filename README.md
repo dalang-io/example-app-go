@@ -37,3 +37,5 @@ The app includes a Dockerfile for automatic container builds.
 ## Environment Variables
 
 - `PORT` - Server port (default: 3000)
+
+<!-- push test 2026-10-29T06:30:26Z: checks that a push rebuilds the deployment -->
